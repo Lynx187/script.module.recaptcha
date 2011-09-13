@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.module.recaptcha" name="urlresolver" version="0.0.1" provider-name="anarchintosh">
+  <requires>
+    <import addon="xbmc.python" version="1.0" />
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+  </extension>
+  <extension point="xbmc.addon.repository" name="ReCaptcha module repository">
+    <info compressed="true">http://mirrors.xbmc.org/addons/dharma-pre/addons.xml</info>
+    <checksum>http://mirrors.xbmc.org/addons/dharma-pre/addons.xml.md5</checksum>
+    <datadir zip="false">http://mirrors.xbmc.org/addons/dharma-pre</datadir>
+  </extension>
+</addon>

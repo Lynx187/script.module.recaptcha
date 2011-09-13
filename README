@@ -1,0 +1,30 @@
+README
+
+Example usage:
+
+1. import recaptcha
+
+2. get the html of the page you think might be using ReCaptcha.
+
+3. do: recaptcha.checkForReCaptcha(html)
+   the result will return False or True. 
+
+4. if the result is True, now do:
+   recaptcha.getCaptcha(html)
+
+5. This will return the captcha image url. Load this in XBMC and ask
+   for the user's response.
+
+6. Now do: 
+   params = recaptcha.buildResponse(userresponse)
+   This will return some parameters.
+
+7. Now you can load the response by when building your url opener
+   by adding in:
+   req = urllib2.Request(url, params)
+
+8. On the html of the result, you should now run
+   recaptcha.checkIfSuceeded(html) 
+   again. If the response is True then the user has entered the right captcha.
+   If the response is False, you should restart the whole process over again.
+   
